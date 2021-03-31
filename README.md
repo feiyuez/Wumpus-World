@@ -78,5 +78,5 @@ What action to return?
 6. Finally, we go to those tiles that are only 100% safe and repeat the above.
 7. If adjecent tiles are all potentially dangerous, we go back home.
 
-This makes sure we won't be killed by Wumpus or fall into a pit, both of which take 1000pt off of the final score. And so the worst case here is that we climb out without gold, which usually scores around -30pt. Therefore in most cases with this safe strategy, the average score will be higher than to risk if you run your agent multiple times.  
+This makes sure we won't be killed by Wumpus or fall into a pit, both of which take 1000pt off of the final score. And so the worst case here is that we climb out without gold, which usually scores around -30pt. Therefore in most cases with this conservative strategy, the average score will be higher than to risk if you run your agent multiple times.  
 Check `MyAI.java` for specific code implementation.
