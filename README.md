@@ -1,5 +1,5 @@
 # Wumpus-World
-This is an AI intro class project at UC Irvine -- the implemention of a Knowledge-based Wumpus World AI agent using Java.
+This is an AI intro class project at UC Irvine, the objective is to implement a Knowledge-based Wumpus World AI agent using Java.
 ## Introduction
 > The Wumpus World is a cave consisting of rooms connected by passageways.
    Lurking somewhere in the cave is the terrible Wumpus, a beast that eats
@@ -73,9 +73,10 @@ What action to return?
 1. If `bump` is perceived, we walked into a wall. And so we set a border (`isBrick = true`) for some row/column of tiles.
 2. If `glitter` is perceived, grab the gold and go back to tile(0, 0) to climb out of cave.
 3. If `stench` is perceived, shoot at all 4 directions to make sure that Wumpus is killed.
-4. If `scream` is perceived, we die. But we won't allow this to happen in our strategy.
+4. If `scream` is perceived, we either got killed by Wumpus or fell. But we won't allow this to happen.
 5. Based on circumstance on the current tile (is there `stench` or `breeze`?), we set the attributes of adjacent tiles.
 6. Finally, we go to those tiles that are only 100% safe and repeat the above.
 7. If adjecent tiles are all potentially dangerous, we go back home.
 
-This makes sure we won't be killed by Wumpus or fall into a pit, both of which take 1000pt off of the final score. And so the worst case here is that we climb out without gold, which usually scores around -30pt. Therefore in most cases with this safe strategy, the average score will be higher than to risk if you run your agent multiple times.
+This makes sure we won't be killed by Wumpus or fall into a pit, both of which take 1000pt off of the final score. And so the worst case here is that we climb out without gold, which usually scores around -30pt. Therefore in most cases with this safe strategy, the average score will be higher than to risk if you run your agent multiple times.  
+Check `MyAI.java` for specific code implementation.
